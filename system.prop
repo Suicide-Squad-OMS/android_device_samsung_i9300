@@ -7,10 +7,10 @@ dalvik.vm.dexopt-data-only=1
 dalvik.vm.dex2oat-Xmx=256m
 rild.libpath=/system/lib/libsecril-shim.so
 rild.libargs=-d /dev/ttyS0
+ro.ril.telephony.mqanelements=5
 ro.sf.lcd_density=320
 ro.lcd_min_brightness=20
 
-# Hardware Info
 ro.device.chipset=Exynos 4412 Quad
 ro.device.cpu=Quad-core 1.4 GHz Cortex-A9
 ro.device.gpu=Mali-400MP4
@@ -20,4 +20,3 @@ ro.device.screen_res=720x1280
 
 # EGL blobs crash on screen off
 ro.egl.destroy_after_detach=true
-
