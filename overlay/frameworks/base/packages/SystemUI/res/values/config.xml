@@ -29,6 +29,9 @@
     <!-- Doze: should the pickup sensor be used as a pulse signal? -->
     <bool name="doze_pulse_on_pick_up">false</bool>
 
-    <bool name="device_supports_lte">false</bool>
+	<bool name="device_supports_lte">false</bool>
+
+    <!-- When true,show the AutoBrightness checkbox -->
+    <bool name="config_show_auto_brightness">true</bool>
 </resources>
 
