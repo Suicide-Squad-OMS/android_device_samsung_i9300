@@ -34,6 +34,10 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/m0
+	
+# Snap camera
+PRODUCT_PACKAGES += \
+    Snap	
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -42,6 +46,10 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.smdk4x12
+	
+# Power
+PRODUCT_PACKAGES += \
+    power.smdk4x12	
 
 # Gps
 PRODUCT_PACKAGES += \
