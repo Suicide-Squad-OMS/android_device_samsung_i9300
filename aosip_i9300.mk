@@ -31,8 +31,11 @@ TARGET_SCREEN_WIDTH := 720
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/nameless/config/common.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+# Inherit from vendor
+$(call inherit-product, vendor/aosip/common.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/samsung/i9300/i9300.mk)
@@ -41,14 +44,20 @@ $(call inherit-product, device/samsung/i9300/i9300.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := nameless_i9300
+PRODUCT_NAME := aosip_i9300
 PRODUCT_DEVICE := i9300
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_MODEL := GT-I9300
 
+# GSM Client ID Base
+PRODUCT_GMS_CLIENTID_BASE := android-samsung
+
 # Inherit the SIM Toolkit
 PRODUCT_PACKAGES += Stk
+
+# Device maintainer(s)
+PRODUCT_BUILD_PROP_OVERRIDES += DEVICE_MAINTAINERS=" Blackjubel"
 
 # Build description
 PRODUCT_BUILD_PROP_OVERRIDES += \
